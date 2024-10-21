@@ -1,8 +1,10 @@
 #include "libc.h"
 
+//   i =>index
+
 char	*ft_strchr(const char *str, int c)
 {
-	size_t	i;/* index */
+	size_t	i;
 
 	if (!str)
 		return (NULL);
