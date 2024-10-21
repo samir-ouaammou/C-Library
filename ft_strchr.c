@@ -1,7 +1,5 @@
 #include "libc.h"
 
-//   i =>index
-
 char	*ft_strchr(const char *str, int c)
 {
 	size_t	i;
@@ -18,3 +16,4 @@ char	*ft_strchr(const char *str, int c)
 	}
 	return (NULL);
 }
+//   i => index

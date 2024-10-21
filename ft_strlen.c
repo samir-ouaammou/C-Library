@@ -1,7 +1,5 @@
 #include <libc.h>
 
-//   l => length
-
 size_t	ft_strlen(const char *str)
 {
 	size_t	l;
@@ -11,3 +9,4 @@ size_t	ft_strlen(const char *str)
 		l++;
 	return (l);
 }
+//   l => length
