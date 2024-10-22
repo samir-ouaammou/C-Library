@@ -20,4 +20,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (s_len);
 }
 //   i => index
-//	 s_len => src_len
+//   s_len => src_len
