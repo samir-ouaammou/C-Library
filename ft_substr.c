@@ -1,38 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 14:14:31 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/22 17:58:36 by souaammo         ###   ########.fr       */
+/*   Created: 2024/10/24 18:04:13 by souaammo          #+#    #+#             */
+/*   Updated: 2024/10/22 18:05:14 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	int		sgn;
-	int		res;
+	size_t	s_len;
+	size_t	temp;
+	char	*res;
 
+	if (!s)
+		return (NULL);
+	s_len = ft_strlen(s);
+	if (start >= s_len)
+		return (ft_strdup(""));
+	if (s_len - start < len)
+		temp = s_len - start;
+	else
+		temp = len;
+	res = (char *)malloc((temp + 1) * sizeof(char));
+	if (!res)
+		return (NULL);
 	i = 0;
-	sgn = 1;
-	while ((str[i]) && ((str[i] >= 9 && str[i] <= 13) || (str[i] == ' ')))
-		i++;
-	if ((str[i] == '+') || (str[i] == '-'))
+	while (i < temp)
 	{
-		if (str[i] == '-')
-			sgn = -1;
+		res[i] = s[start + i];
 		i++;
 	}
-	res = 0;
-	while ((str[i]) && (str[i] >= '0' && str[i] <= '9'))
-	{
-		res = res * 10 + (str[i] - '0');
-		i++;
-	}
-	return (res * sgn);
+	res[i] = '\0';
+	return (res);
 }

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: souaammo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 08:19:53 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/22 14:34:47 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/22 18:03:37 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libc.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {
