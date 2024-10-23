@@ -6,13 +6,13 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 20:06:21 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/23 10:47:34 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/23 11:44:43 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_check(char c, const char *set)
+static int	ft_check(char c, const char *set)
 {
 	size_t	i;
 
@@ -24,20 +24,6 @@ int	ft_check(char c, const char *set)
 		i++;
 	}
 	return (0);
-}
-
-char	*ft_strncpy(char *dst, const char *src, size_t len)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < len && src[i])
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -57,9 +43,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (end > start && ft_check(s1[end - 1], set))
 		end--;
 	temp = end - start;
-	res = (char *)malloc((temp + 1) * sizeof(char));
+	res = (char *)ft_calloc((temp + 1) , sizeof(char));
 	if (!res)
 		return (NULL);
 	i = 0;
-	return (ft_strncpy(res, (char *)&s1[start], temp));
+	return (ft_substr(res, start, temp));
 }

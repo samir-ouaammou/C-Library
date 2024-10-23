@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:04:13 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/23 10:47:37 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/23 11:47:09 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		temp = s_len - start;
 	else
 		temp = len;
-	res = (char *)malloc((temp + 1) * sizeof(char));
+	res = (char *)ft_calloc((temp + 1) , sizeof(char));
 	if (!res)
 		return (NULL);
 	i = 0;
