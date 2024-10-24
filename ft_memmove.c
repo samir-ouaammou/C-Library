@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 20:48:44 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/24 21:36:59 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/24 22:42:20 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			d_cpy[len] = s_cpy[len];
 		}
 	}
-
 	else
 		ft_memcpy(dst, src, len);
 	return (dst);
