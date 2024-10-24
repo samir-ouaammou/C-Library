@@ -5,10 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 14:42:39 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/23 10:46:40 by souaammo         ###   ########.fr       */
+/*   Created: 2024/10/24 14:25:29 by souaammo          #+#    #+#             */
+/*   Updated: 2024/10/24 19:56:08 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

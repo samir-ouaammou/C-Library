@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 22:11:05 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/23 11:42:03 by souaammo         ###   ########.fr       */
+/*   Created: 2024/10/24 15:35:32 by souaammo          #+#    #+#             */
+/*   Updated: 2024/10/24 19:56:08 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,20 @@
 
 char	*ft_strdup(const char *str)
 {
-	return (ft_substr(str, 0, ft_strlen(str)));
+	size_t	i;
+	char	*res;
+
+	if (!str)
+		return (NULL);
+	res = (char *)ft_calloc(sizeof(char), (ft_strlen(str) + 1));
+	if (!res)
+		return (NULL);
+	i = 0;
+	while (str[i])
+	{
+		res[i] = str[i];
+		i++;
+	}
+	res[i] = '\0';
+	return (res);
 }

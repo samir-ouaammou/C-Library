@@ -5,10 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 11:28:15 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/23 10:46:30 by souaammo         ###   ########.fr       */
+/*   Created: 2024/10/24 14:06:31 by souaammo          #+#    #+#             */
+/*   Updated: 2024/10/24 19:56:08 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 08:19:53 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/23 10:47:21 by souaammo         ###   ########.fr       */
+/*   Created: 2024/10/24 14:27:01 by souaammo          #+#    #+#             */
+/*   Updated: 2024/10/24 19:56:08 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,3 @@ size_t	ft_strlen(const char *str)
 		l++;
 	return (l);
 }
-//   l => length

@@ -5,12 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 09:07:09 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/23 10:46:37 by souaammo         ###   ########.fr       */
+/*   Created: 2024/10/24 14:12:03 by souaammo          #+#    #+#             */
+/*   Updated: 2024/10/24 19:56:08 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isdigit(int c)
 {
-	return ((c >= '0' && c <= '9'));
+	return (c >= '0' && c <= '9');
 }
