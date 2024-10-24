@@ -1,33 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 15:07:43 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/24 22:32:50 by souaammo         ###   ########.fr       */
+/*   Created: 2024/10/24 22:03:59 by souaammo          #+#    #+#             */
+/*   Updated: 2024/10/24 22:13:49 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+char	*ft_strnstr(const char *str, const char *needle, size_t len)
 {
-	size_t	i;
-	size_t	d_len;
-	size_t	s_len;
+	size_t i;
+	size_t j;
 
-	d_len = ft_strlen(dest);
-	s_len = ft_strlen(src);
-	if ((size == 0) || size <= d_len)
-		return (s_len + size);
+	if (!str)
+		return (NULL);
+	if (!*needle)
+		return ((char *)str);
 	i = 0;
-	while ((src[i]) && (i + d_len < size - 1))
+	while (str[i] && i < len)
 	{
-		dest[d_len + i] = src[i];
+		j = 0;
+		while (str[i + j] && needle[j] && (i + j) < len)
+		{
+			if (str[i + j] != needle[j])
+				break ;
+			j++;
+		}
+		if (!needle[j])
+			return ((char *)&str[i]);
 		i++;
 	}
-	dest[d_len + i] = '\0';
-	return (s_len + d_len);
+	return (NULL);
 }
