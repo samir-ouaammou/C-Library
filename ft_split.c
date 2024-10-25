@@ -6,20 +6,53 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:59:52 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/25 12:25:38 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/25 14:59:24 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_free(char **str, size_t wc)
+static void	ft_free(char **str, size_t wc)
 {
-	while (wc > 0)
+	size_t	i;
+
+	i = 0;
+	while (i <= wc)
 	{
-		free(str[--wc]);
+		free(str[i]);
+		i--;
 	}
 	free(str);
-	return (NULL);
+}
+
+static char	**ft_cp(const char *s, char c, char **res)
+{
+	size_t	i;
+	size_t	j;
+	size_t	h;
+
+	i = 0;
+	h = 0;
+	while (s[i])
+	{
+		while (s[i] && s[i] == c)
+			i++;
+		if (s[i])
+		{
+			j = i;
+			while (s[i] && s[i] != c)
+				i++;
+			res[h] = ft_substr(s, j, i - j);
+			if (!res[h])
+			{
+				ft_free(res, h);
+				return (NULL);
+			}
+			h++;
+		}
+	}
+	res[h] = NULL;
+	return (res);
 }
 
 static int	ft_word_count(const char *strs, char c)
@@ -43,9 +76,6 @@ static int	ft_word_count(const char *strs, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t i;
-	size_t j;
-	size_t h;
 	char **res;
 
 	if (!s)
@@ -55,30 +85,12 @@ char	**ft_split(char const *s, char c)
 		res = (char **)ft_calloc(2, sizeof(char *));
 		if (!res)
 			return (NULL);
-		res[0] = ft_strdup(s1);
+		res[0] = ft_strdup(s);
 		res[1] = NULL;
 		return (res);
 	}
 	res = (char **)ft_calloc(ft_word_count(s, c) + 1, sizeof(char *));
 	if (!res)
 		return (NULL);
-	i = 0;
-	h = 0;
-	while (s[i])
-	{
-		while ((s[i]) && (s[i] == c))
-			i++;
-		if (s[i])
-		{
-			j = i;
-			while ((s[i]) && (s[i] != c))
-				i++;
-			res[h] = ft_substr(s, j, i - 1);
-			if (!res)
-				return (ft_free(res, h));
-			h++;
-		}
-	}
-	res[h] = NULL;
-	return (res);
+	return (ft_cp(s, c, res));
 }

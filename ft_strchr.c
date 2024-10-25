@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 21:13:01 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/24 22:32:44 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/25 14:53:04 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strchr(const char *str, int c)
 	if (!str)
 		return (NULL);
 	c = (unsigned char)c;
-	if (!c)
-		return ((char *)str);
+	if (c == '\0')
+		return ((char *)&str[ft_strlen(str)]);
 	i = 0;
 	while (str[i])
 	{
