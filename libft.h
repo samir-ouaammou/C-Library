@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 19:54:13 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/25 22:21:56 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/25 22:41:26 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_split(char const *s, char c);
 char	*ft_strnstr(const char *str, const char *needle, size_t len);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	*ft_memset(void *s, int c, size_t len);
 void	*ft_memchr(const void *s, int c, size_t len);
