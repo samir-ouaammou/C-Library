@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 20:30:52 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/24 22:32:05 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/25 10:21:07 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 void	ft_bzero(void *s, size_t len)
 {
-	size_t i;
-	unsigned char *str;
-
-	i = 0;
+	ft_memset(s, 0, len);
 }

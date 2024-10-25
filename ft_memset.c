@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 19:53:26 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/24 22:32:41 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/25 09:56:59 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memset(void *s, int c, size_t len)
 {
 	size_t i;
-	char *str;
+	unsigned char *str;
 
 	str = (unsigned char *)s;
 	c = (unsigned char)c;

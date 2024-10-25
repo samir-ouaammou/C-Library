@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:35:04 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/24 22:41:45 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/25 11:20:50 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t count, size_t len)
 {
-	void *res;
+	void	*res;
 
 	if (count == 0 || len == 0)
 		return (NULL);
