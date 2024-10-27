@@ -1,38 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 22:14:22 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/27 14:06:04 by souaammo         ###   ########.fr       */
+/*   Created: 2024/10/27 10:05:33 by souaammo          #+#    #+#             */
+/*   Updated: 2024/10/27 10:16:02 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	long	res;
-	size_t	i;
-	short	sgn;
-
-	i = 0;
-	while (str[i] && ((str[i] >= 9 && str[i] <= 13) || str[i] == ' '))
-		i++;
-	sgn = 1;
-	if (str[i] == '+' || str[i] == '-')
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		if (str[i] == '-')
-			sgn = -1;
-		i++;
+		f(lst->content);
+		lst = lst->next;
 	}
-	res = 0;
-	while (str[i] && ft_isdigit(str[i]))
-	{
-		res = res * 10 + (str[i] - '0');
-		i++;
-	}
-	return ((int)(res * sgn));
 }
