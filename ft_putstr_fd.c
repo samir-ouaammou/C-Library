@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 11:17:48 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/26 12:06:52 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/27 19:05:36 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t len;
+	size_t	len;
 
 	if ((fd >= 0) && (s))
 	{

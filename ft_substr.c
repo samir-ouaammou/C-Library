@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:28:57 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/25 11:37:31 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/27 19:09:50 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t  i;
-	size_t  size;
-	size_t  s_len;
-	char    *res;
+	size_t	i;
+	size_t	size;
+	size_t	s_len;
+	char	*res;
 
 	if (!s)
 		return (NULL);

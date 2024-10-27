@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 21:13:01 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/25 14:53:04 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/27 19:08:07 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	size_t i;
+	size_t	i;
 
 	if (!str)
 		return (NULL);

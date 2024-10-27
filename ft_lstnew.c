@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:12:49 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/26 22:20:19 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/27 19:03:05 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *lst;
+	t_list	*lst;
 
 	lst = (t_list *)ft_calloc(sizeof(t_list), 1);
 	if (!lst)

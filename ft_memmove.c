@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 20:48:44 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/25 15:00:33 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/27 19:04:28 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char *d_cpy;
-	const unsigned char *s_cpy;
+	unsigned char		*d_cpy;
+	const unsigned char	*s_cpy;
 
 	if (dst > src)
 	{

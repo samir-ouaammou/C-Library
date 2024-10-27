@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 11:35:33 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/26 11:55:52 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/27 19:05:22 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char temp;
+	char	temp;
 
 	if (fd < 0)
 		return ;

@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 21:43:57 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/25 22:36:36 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/27 19:09:00 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t i;
-	char    *res;
+	size_t	i;
+	char	*res;
 
 	if ((!s) || (!f))
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:59:52 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/26 12:30:28 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/27 19:06:25 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ static int	ft_word_count(const char *strs, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char **res;
+	char	**res;
 
 	if (!s)
 		return (NULL);
