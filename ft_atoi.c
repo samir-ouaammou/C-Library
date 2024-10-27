@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 22:14:22 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/27 14:06:04 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/27 17:55:01 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 int	ft_atoi(const char *str)
 {
-	long	res;
-	size_t	i;
-	short	sgn;
+	unsigned long	res;
+	unsigned long	temp;
+	size_t			i;
+	short			sgn;
 
 	i = 0;
 	while (str[i] && ((str[i] >= 9 && str[i] <= 13) || str[i] == ' '))
@@ -31,7 +32,14 @@ int	ft_atoi(const char *str)
 	res = 0;
 	while (str[i] && ft_isdigit(str[i]))
 	{
-		res = res * 10 + (str[i] - '0');
+		temp = res * 10 + (str[i] - '0');
+		if (temp >= 9223372036854775807)
+		{
+			if (sgn == -1)
+				return (0);
+			return (-1);
+		}
+		res = temp;
 		i++;
 	}
 	return ((int)(res * sgn));
