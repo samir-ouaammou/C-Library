@@ -6,11 +6,41 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:39:09 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/27 19:11:10 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/27 21:43:48 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	*ft_strcpy(char *dst, const char *src)
+{
+	size_t	i;
+
+	i = 0;
+	while (dst[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
+}
+
+static char	*ft_strcat(char *dst, const char *src)
+{
+	size_t	i;
+	size_t	d_len;
+
+	d_len = ft_strlen(dst);
+	i = 0;
+	while (src[i])
+	{
+		dst[d_len + i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
+}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
