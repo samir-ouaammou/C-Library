@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:04:28 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/27 18:59:54 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/27 22:52:00 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static size_t	ft_countlen(int n)
 	size_t	len;
 
 	len = 0;
+	if (n == -2147483648)
+		return (11);
 	if (n < 0)
 	{
 		len++;
@@ -30,8 +32,10 @@ static size_t	ft_countlen(int n)
 	return (len);
 }
 
-static char	*ft_part1(char *res)
+static char	*ft_part1(void)
 {
+	char *res;
+
 	res = (char *)ft_calloc(2, sizeof(char));
 	if (!res)
 		return (NULL);
@@ -46,12 +50,14 @@ char	*ft_itoa(int n)
 	char	*res;
 
 	if (n == 0)
-		return (ft_prt1(res));
+		return (ft_part1());
 	len = ft_countlen(n);
 	res = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!res)
 		return (NULL);
 	res[len] = '\0';
+	if (n == -2147483648)
+		return (res = "-2147483648");
 	if (n < 0)
 	{
 		res[0] = '-';
