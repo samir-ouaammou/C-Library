@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:50:18 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/25 11:59:12 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/28 20:24:59 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	while (s1[start] && ft_check(s1[start], set))
 		start++;
-	end = ft_strlen(s1) - 1;
+	end = ft_strlen(s1);
 	while (end > start && ft_check(s1[end - 1], set))
 		end--;
 	return (ft_substr(s1, start, end - start));
