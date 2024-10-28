@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize_bonu.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 10:16:30 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/27 19:02:54 by souaammo         ###   ########.fr       */
+/*   Created: 2024/10/26 15:35:49 by souaammo          #+#    #+#             */
+/*   Updated: 2024/10/28 10:05:34 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*list;
-	t_list	*new;
-	void	*value;
+	int	count;
 
-	list = NULL;
-	while (lst && f && del)
+	count = 0;
+	while (lst)
 	{
-		value = f(lst->content);
-		new = ft_lstnew(value);
-		if (!new)
-		{
-			del(value);
-			ft_lstclear(&list, del);
-			return (NULL);
-		}
-		ft_lstadd_back(&list, new);
+		count++;
 		lst = lst->next;
 	}
-	return (list);
+	return (count);
 }
