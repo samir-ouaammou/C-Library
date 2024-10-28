@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:59:52 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/27 19:06:25 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/28 09:56:16 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,12 @@ static char	**ft_cp(const char *s, char c, char **res)
 			j = i;
 			while (s[i] && s[i] != c)
 				i++;
-			res[h] = ft_substr(s, j, i - j);
-			if (!res[h])
+			res[h++] = ft_substr(s, j, i - j);
+			if (!res[h - 1])
 			{
-				ft_free(res, h);
+				ft_free(res, h - 1);
 				return (NULL);
 			}
-			h++;
 		}
 	}
 	res[h] = NULL;

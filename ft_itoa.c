@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:04:28 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/27 22:52:00 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/28 09:48:57 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static size_t	ft_countlen(int n)
 
 static char	*ft_part1(void)
 {
-	char *res;
+	char	*res;
 
 	res = (char *)ft_calloc(2, sizeof(char));
 	if (!res)
