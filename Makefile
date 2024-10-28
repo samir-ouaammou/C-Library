@@ -9,15 +9,16 @@ FILES_BONUS_C = ft_lstadd_back_bonu.c   ft_lstdelone_bonu.c ft_lstmap_bonu.c\
     ft_lstadd_front_bonu.c  ft_lstiter_bonu.c   ft_lstnew_bonu.c\
     ft_lstclear_bonu.c  ft_lstlast_bonu.c   ft_lstsize_bonu.c
 
-
 OBJS = ${FILES_C:%.c=%.o}
 
 NAME = libft.a
 
 CC = cc
+
 CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -rf
+
 AR = ar rc
 
 all: $(NAME)
