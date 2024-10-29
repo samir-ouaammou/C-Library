@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:59:52 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/28 09:56:16 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/29 11:44:04 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ static void	ft_free(char **str, size_t wc)
 	size_t	i;
 
 	i = 0;
-	while (i <= wc)
+	while (i < wc)
 	{
 		free(str[i]);
-		i--;
+		i++;
 	}
 	free(str);
 }
@@ -45,7 +45,7 @@ static char	**ft_cp(const char *s, char c, char **res)
 			res[h++] = ft_substr(s, j, i - j);
 			if (!res[h - 1])
 			{
-				ft_free(res, h - 1);
+				ft_free(res, h);
 				return (NULL);
 			}
 		}
