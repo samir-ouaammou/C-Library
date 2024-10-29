@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 19:54:13 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/27 21:49:43 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/29 09:47:48 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ size_t				ft_strlcat(char *dest, const char *src, size_t size);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 int					ft_strncmp(const char *s1, const char *s2, size_t len);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-char				*ft_strnstr(const char *str, const char *needle, size_t len);
+char				*ft_strnstr(const char *str, const char *needle,
+						size_t len);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);
@@ -65,6 +66,7 @@ void				ft_lstadd_front(t_list **lst, t_list *new);
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+						void (*del)(void *));
 
 #endif
