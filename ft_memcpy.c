@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 20:42:23 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/27 19:04:17 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/29 10:20:15 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 
 	d_cpy = (unsigned char *)dst;
 	s_cpy = (const unsigned char *)src;
+	if (!s_cpy && !d_cpy)
+		return (NULL);
 	i = 0;
 	while (i < len)
 	{
