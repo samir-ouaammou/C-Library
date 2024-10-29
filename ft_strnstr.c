@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 22:03:59 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/29 09:43:06 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/29 10:47:40 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strnstr(const char *str, const char *needle, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (!str)
-		return (NULL);
 	if (!*needle)
 		return ((char *)str);
 	i = 0;
