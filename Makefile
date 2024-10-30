@@ -13,26 +13,25 @@ OBJS = ${FILES:%.c=%.o}
 
 BOBJS = ${BFILES:%.c=%.o}
 
+HEADRF = libft.h
+
 CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
 
-AR = ar rc
+AR = ar rcs
 
 RM = rm -rf
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
-
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
 bonus: $(BOBJS)
 	$(AR) $(NAME) $(BOBJS)
+
+$(NAME): $(HEADRF) $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
 clean:
 	$(RM) $(OBJS) $(BOBJS)
@@ -44,4 +43,4 @@ re: fclean all
 
 .PHONY: all clean fclean re
 
-.SECONDARY: $(OBJS) $(BOBJS)
+.SECONDARY: $(HEADRF) $(OBJS) $(BOBJS)
