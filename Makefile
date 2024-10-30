@@ -13,13 +13,13 @@ OBJS = ${FILES:%.c=%.o}
 
 BOBJS = ${BFILES:%.c=%.o}
 
-HEADRF = libft.h
-
 CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
+
+HEADRF = libft.h
 
 AR = ar rcs
 
