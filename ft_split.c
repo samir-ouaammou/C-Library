@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:59:52 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/29 11:44:04 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/10/30 10:35:05 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,14 +73,22 @@ static int	ft_word_count(const char *strs, char c)
 	return (count);
 }
 
+#include "libft.h"
+
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
+	size_t	word_count;
 
 	if (!s)
 		return (NULL);
 	if (c == '\0')
 	{
+		if (*s == '\0')
+		{
+			res = (char **)ft_calloc(1, sizeof(char *));
+			return (res);
+		}
 		res = (char **)ft_calloc(2, sizeof(char *));
 		if (!res)
 			return (NULL);
@@ -88,7 +96,8 @@ char	**ft_split(char const *s, char c)
 		res[1] = NULL;
 		return (res);
 	}
-	res = (char **)ft_calloc(ft_word_count(s, c) + 1, sizeof(char *));
+	word_count = ft_word_count(s, c);
+	res = (char **)ft_calloc(word_count + 1, sizeof(char *));
 	if (!res)
 		return (NULL);
 	return (ft_cp(s, c, res));
