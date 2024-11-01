@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:59:52 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/30 18:33:19 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/11/01 21:37:14 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,26 +76,26 @@ static int	ft_word_count(const char *strs, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
-	size_t	word_count;
 
 	if (!s)
 		return (NULL);
 	if (c == '\0')
 	{
 		if (*s == '\0')
-		{
-			res = (char **)ft_calloc(1, sizeof(char *));
-			return (res);
-		}
+			return (NULL);
 		res = (char **)ft_calloc(2, sizeof(char *));
 		if (!res)
 			return (NULL);
 		res[0] = ft_strdup(s);
+		if (!res[0])
+		{
+			free(res);
+			return (NULL);
+		}
 		res[1] = NULL;
 		return (res);
 	}
-	word_count = ft_word_count(s, c);
-	res = (char **)ft_calloc(word_count + 1, sizeof(char *));
+	res = (char **)ft_calloc(ft_word_count(s, c) + 1, sizeof(char *));
 	if (!res)
 		return (NULL);
 	return (ft_cp(s, c, res));

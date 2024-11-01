@@ -6,7 +6,7 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:28:57 by souaammo          #+#    #+#             */
-/*   Updated: 2024/10/29 09:53:35 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/11/01 21:28:07 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	s_len = ft_strlen(s);
 	if (start >= s_len)
 		return (ft_strdup(""));
-	if (s_len < len)
+	if (s_len - start < len)
 		size = s_len - start;
 	else
 		size = len;
-	res = (char *)ft_calloc(sizeof(char), size + 1);
+	res = (char *)ft_calloc(size + 1, sizeof(char));
 	if (!res)
 		return (NULL);
 	i = 0;
