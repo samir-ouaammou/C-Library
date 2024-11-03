@@ -6,11 +6,18 @@
 /*   By: souaammo <souaammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 22:14:22 by souaammo          #+#    #+#             */
-/*   Updated: 2024/11/03 15:38:06 by souaammo         ###   ########.fr       */
+/*   Updated: 2024/11/03 16:47:40 by souaammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_check(short nbr)
+{
+	if (nbr == -1)
+		return (0);
+	return (-1);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -31,11 +38,9 @@ int	ft_atoi(const char *str)
 	res = 0;
 	while (str[i] && ft_isdigit(str[i]))
 	{
+		if (res > (9223372036854775807 - (str[i] - '0')) / 10)
+			return (ft_check(sgn));
 		res = res * 10 + (str[i] - '0');
-		if ((res > 9223372036854775807) && (sgn == -1))
-			return (0);
-		if ((res >= 9223372036854775807) && (sgn == 1))
-			return (-1);
 		i++;
 	}
 	return ((int)(res * sgn));
