@@ -90,7 +90,7 @@ int main() {
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/samir-ouaammou/libft
+   git clone https://github.com/samir-ouaammou/1337-Libft
    ```
 
 2. Navigate to the project directory:
