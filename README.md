@@ -96,7 +96,7 @@ int main() {
 
 2. Navigate to the project directory:
    ```bash
-   cd 1337-Libft/Projects
+   cd 1337-Libft/Project
    ```
 
 3. Compile the source files using `make`:
