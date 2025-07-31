@@ -91,12 +91,12 @@ int main() {
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/samir-ouaammou/1337-Libft
+   git clone https://github.com/samir-ouaammou/C-Library
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd 1337-Libft/Project
+   cd C-Library/Project
    ```
 
 3. Compile the source files using `make`:
